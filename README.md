@@ -103,7 +103,8 @@ Direct Google experiment může vrátit challenge/interstitial místo SERP nebo 
 
 ## Možné veřejné nasazení
 
-Aplikace zatím není veřejně nasazená. Pro demonstrační nasazení lze použít Render Web Service; nastavení služby musí obsahovat tajnou proměnnou `SERPAPI_API_KEY`. Start příkaz pro platformu poskytující proměnnou `PORT`:
+Pro demonstrační nasazení lze použít Render Web Service; nastavení služby musí obsahovat tajnou proměnnou `SERPAPI_API_KEY`. Start příkaz pro platformu poskytující proměnnou `PORT`:
+Aplikace je veřejně dostupná na: https://inizio-google-search-m1ku.onrender.com/
 
 ```bash
 uvicorn app.main:app --host 0.0.0.0 --port $PORT
