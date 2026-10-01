@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="cs">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Vyhledejte přirozené výsledky Google a stáhněte je jako JSON nebo CSV.">
+  <title>Přirozené výsledky Google</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <main class="page">
+    <header class="intro">
+      <p class="eyebrow">Jednoduchý nástroj pro vyhledávání</p>
+      <h1>Přirozené výsledky Google</h1>
+      <p class="lead">Zadejte frázi a zobrazte přirozené výsledky vyhledávání. Reklamy a ostatní bloky se nezobrazují.</p>
+    </header>
+
+    <form id="search-form" class="search-form">
+      <label for="query">Klíčové slovní spojení</label>
+      <div class="search-row">
+        <input id="query" name="q" type="search" maxlength="200" placeholder="např. nejlepší kavárna Praha" required autocomplete="off">
+        <button id="search-button" type="submit">Hledat</button>
+      </div>
+      <p class="hint">Nejvýše 200 znaků · lokalita: Praha, jazyk: čeština</p>
+    </form>
+
+    <div id="status" class="status" role="status" aria-live="polite"></div>
+    <section id="results-section" class="results-section" aria-labelledby="results-heading" hidden>
+      <div class="results-header">
+        <div>
+          <h2 id="results-heading">Výsledky</h2>
+          <p id="results-summary" class="hint"></p>
+        </div>
+        <div class="downloads">
+          <button id="download-json" class="button-secondary" type="button">Stáhnout JSON</button>
+          <button id="download-csv" class="button-secondary" type="button">Stáhnout CSV</button>
+        </div>
+      </div>
+      <ol id="results-list" class="results-list"></ol>
+    </section>
+    <footer>Výsledky se mohou lišit podle lokality a nastavení vyhledávání.</footer>
+  </main>
+  <script src="/static/script.js" defer></script>
+</body>
+</html>
